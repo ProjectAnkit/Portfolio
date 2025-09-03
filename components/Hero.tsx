@@ -5,7 +5,7 @@ import styles from './Hero.module.css';
 
 export default function Hero() {
   return (
-    <section className="min-h-screen relative overflow-hidden pb-16">
+    <section className="min-h-screen relative overflow-hidden">
       {/* Mobile Layout */}
       <div className="md:hidden flex flex-col h-screen">
         {/* Top Half: Profile Image */}
