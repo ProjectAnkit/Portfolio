@@ -78,7 +78,7 @@ export default function LiveProject() {
                       </p>
                     </div>
                     <a
-                      href="https://eco-tracker-jeevanra-frontend.vercel.app/"
+                      href="https://jeevanra.vercel.app/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className={`${styles.visitButton} inline-block text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 hover:bg-white/10 hover:shadow-md`}
