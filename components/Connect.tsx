@@ -27,7 +27,7 @@ const contacts = [
 
 export default function ConnectSection() {
   return (
-    <div className="bg-black flex flex-col items-center justify-center text-white px-6 min-h-screen">
+    <div className="bg-black flex flex-col items-center justify-center text-white px-6 min-h-screen py-16">
       {/* Heading */}
       <motion.h2
         initial={{ y: -50, opacity: 0 }}

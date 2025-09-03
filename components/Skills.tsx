@@ -16,7 +16,7 @@ const skills = [
 
 export default function SkillSection() {
   return (
-    <section className="bg-black relative min-h-screen">
+    <section className="bg-black relative min-h-screen py-16">
       <div className="container mx-auto px-4 relative z-10">
       {/* Heading at start */}
       <motion.h2

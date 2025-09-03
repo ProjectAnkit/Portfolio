@@ -12,7 +12,7 @@ export default function WorkExperience() {
       };
 
   return (
-    <section className="bg-black relative min-h-screen">
+    <section className="bg-black relative min-h-screen py-16">
       <div className="container mx-auto px-4 relative z-10">
       <m.h2
           className={`text-xl md:text-3xl font-bold text-white mb-12`}

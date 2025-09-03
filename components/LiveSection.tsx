@@ -42,7 +42,7 @@ export default function LiveProject() {
   ];
 
   return (
-    <section className="bg-black relative min-h-screen">
+    <section className="bg-black relative min-h-screen py-16">
       {/* Main Content */}
       <div className="container mx-auto px-4 relative z-10">
         <m.h2

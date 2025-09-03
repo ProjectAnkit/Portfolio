@@ -23,7 +23,7 @@ const projects = [
 
 export default function ProjectSection() {
   return (
-    <div className="bg-black flex flex-col items-start justify-start text-white px-6 py-30">
+    <div className="bg-black flex flex-col items-start justify-start text-white px-6 py-16">
       <div className="container mx-auto px-4">
         {/* Heading */}
         <motion.h2

@@ -10,7 +10,7 @@ export default function Home() {
     <main className="pt-16">
       <Header />
       <Hero />
-      <section id="about" className="bg-black flex flex-col items-center justify-center text-white px-6 min-h-screen">
+      <section id="about" className="bg-black flex flex-col items-center justify-center text-white px-6 min-h-screen py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-white mb-8">About Me</h2>
           <p className="text-gray-300">
