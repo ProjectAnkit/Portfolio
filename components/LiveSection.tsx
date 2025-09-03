@@ -72,7 +72,7 @@ export default function LiveProject() {
                   </div>
                   <div className={`md:w-1/2 p-8 flex flex-col justify-between`}>
                     <div>
-                      <h3 className="text-3xl font-semibold text-white mb-4">Jeevanra.com</h3>
+                      <h3 className="text-2xl md:text-3xl font-semibold text-white mb-4">Jeevanra.com</h3>
                       <p className="text-gray-300 text-lg mb-6">
                       Jeevanra is a sustainability-driven web application that helps users track and analyze their daily CO₂ emissions through an interactive dashboard. Built with React for the frontend, Spring Boot for backend APIs, and MongoDB for data storage, it provides real-time insights and personalized suggestions to encourage eco-friendly habits.
                       </p>
