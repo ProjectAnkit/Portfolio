@@ -9,8 +9,9 @@
     z-index: 1;
   }
   
-  @media (max-width: 768px) {
+  /* Remove diagonal shape on mobile */
+  @media (max-width: 767px) {
     .diagonalShape {
-      clip-path: polygon(0 0, 80% 0, 20% 100%, 0 100%);
+      display: none;
     }
   }

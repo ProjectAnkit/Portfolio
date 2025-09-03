@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { scrollToSection } from '@/utils/scrollUtils';
+import { Menu } from 'lucide-react';
 
 const navItems = [
   { name: 'About', section: 'about' },
@@ -15,6 +16,16 @@ const navItems = [
 
 export default function Header() {
   const [activeSection, setActiveSection] = useState('about');
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  
+  const toggleDrawer = () => {
+    setIsDrawerOpen(!isDrawerOpen);
+  };
+  
+  const handleNavClick = (section: string) => {
+    scrollToSection(section);
+    setIsDrawerOpen(false);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -42,13 +53,14 @@ export default function Header() {
           {/* Logo */}
           <Link 
             href="/" 
-            className="text-white text-xl font-medium tracking-tight"
+            className="text-xl font-bold text-white"
+            onClick={() => scrollToSection('home')}
           >
             Portfolio
           </Link>
           
-          {/* Navigation */}
-          <nav>
+          {/* Desktop Navigation */}
+          <nav className="hidden md:block">
             <ul className="flex space-x-8">
               {navItems.map((item) => (
                 <li key={item.section}>
@@ -61,7 +73,7 @@ export default function Header() {
                     {item.name}
                     <span 
                       className={`absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full ${
-                        activeSection === item.section ? 'w-full' : 'w-0'
+                        activeSection === item.section ? 'w-full' : ''
                       }`}
                     />
                   </button>
@@ -69,6 +81,47 @@ export default function Header() {
               ))}
             </ul>
           </nav>
+          
+          {/* Mobile Menu Button */}
+          <button 
+            className="md:hidden text-white p-2"
+            onClick={toggleDrawer}
+            aria-label="Toggle menu"
+          >
+            <Menu size={24} />
+          </button>
+        </div>
+      </div>
+      
+      {/* Mobile Drawer */}
+      <div 
+        className={`fixed inset-y-0 right-0 w-3/5 bg-black z-50 transform transition-transform duration-300 ease-in-out ${
+          isDrawerOpen ? 'translate-x-0' : 'translate-x-full'
+        }`}
+      >
+        <div className="flex flex-col h-full justify-center items-center space-y-8">
+          <button 
+            className="absolute top-4 right-4 text-white p-2"
+            onClick={toggleDrawer}
+            aria-label="Close menu"
+          >
+            ✕
+          </button>
+          
+          <ul className="flex flex-col items-center space-y-8">
+            {navItems.map((item) => (
+              <li key={item.section}>
+                <button
+                  onClick={() => handleNavClick(item.section)}
+                  className={`text-xl font-medium text-white hover:text-gray-300 transition-colors ${
+                    activeSection === item.section ? 'text-white' : 'text-gray-400'
+                  }`}
+                >
+                  {item.name}
+                </button>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </header>

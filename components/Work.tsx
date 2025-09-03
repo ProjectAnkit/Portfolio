@@ -33,11 +33,11 @@ export default function WorkExperience() {
           className="bg-gradient-to-br from-zinc-900 to-black border border-zinc-800 shadow-2xl rounded-2xl p-10 relative overflow-hidden"
         >
           {/* Title */}
-          <div className="flex items-center gap-4 mb-8">
-            <div className="p-3 rounded-xl bg-zinc-800 border border-zinc-700 shadow-md">
-              <Briefcase className="text-purple-400 w-8 h-8" />
+          <div className="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-8">
+            <div className="p-2 sm:p-3 rounded-lg sm:rounded-xl bg-zinc-800 border border-zinc-700 shadow-md">
+              <Briefcase className="text-purple-400 w-5 h-5 sm:w-8 sm:h-8" />
             </div>
-            <h2 className="text-4xl font-bold tracking-tight">
+            <h2 className="text-2xl sm:text-4xl font-bold tracking-tight">
               Jellyfish Technologies
             </h2>
           </div>
